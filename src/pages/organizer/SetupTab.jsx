@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Plus, ChevronDown, ChevronUp } from 'lucide-react';
 import { useEventData, useMutateEventData, useDeleteEvent } from '../../hooks/useEventData.jsx';
 import { Btn, Card, Input, Select, SectionHead, Empty, Motion, ListRow, DelBtn, toast, ConfirmModal } from '../../components/ui';
@@ -425,7 +425,14 @@ function TeamsSection() {
 }
 
 export default function SetupTab() {
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(() => {
+    return Number(sessionStorage.getItem('hackjudge_setup_step')) || 0;
+  });
+  
+  useEffect(() => {
+    sessionStorage.setItem('hackjudge_setup_step', step);
+  }, [step]);
+
   const { data: ev, isLoading } = useEventData();
 
   if (isLoading) return <div style={{ padding: 40, textAlign: 'center', color: 'var(--muted)' }}>Loading event data...</div>;
