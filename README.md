@@ -3,7 +3,7 @@
   <h1>HackJudge</h1>
   <p><strong>The High-Performance Evaluation Engine for Hackathons & Pitch Competitions</strong></p>
   <p>
-    <a href="https://hack-judge-v2.vercel.app/">Live Demo</a> ·
+    <a href="https://hackjudge.vercel.app/">Live Demo</a> ·
     <a href="#features">Features</a> ·
     <a href="#tech-stack">Tech Stack</a> ·
     <a href="#getting-started">Getting Started</a>

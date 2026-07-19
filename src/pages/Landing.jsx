@@ -130,7 +130,7 @@ export default function Landing() {
           <Motion type="fadeIn">
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'transparent', border: '1px solid var(--line)', borderRadius: 99, padding: '6px 14px', marginBottom: 40, zIndex: 1, position: 'relative' }}>
               <div className="pulse-once" style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--amber)', boxShadow: '0 0 8px var(--amber)' }} />
-              <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink)', letterSpacing: '.1em', textTransform: 'uppercase', fontFamily: 'var(--font-mono)' }}>HackJudge V2 is Live</span>
+              <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink)', letterSpacing: '.1em', textTransform: 'uppercase', fontFamily: 'var(--font-mono)' }}>System Online</span>
             </div>
           </Motion>
           
@@ -138,7 +138,6 @@ export default function Landing() {
             <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, lineHeight: 0.95, fontSize: 'clamp(56px,10vw,110px)', color: 'var(--ink)', letterSpacing: '-.05em', marginBottom: 24, maxWidth: 900, zIndex: 1, position: 'relative' }}>
               Evaluate<br />
               <span style={{ color: 'var(--muted)' }}>with precision.</span>
-              <div style={{ fontSize: 'clamp(24px, 4vw, 32px)', color: 'var(--blue)', marginTop: 16, fontWeight: 600 }}>Welcome to Version 2.0</div>
             </h1>
           </Motion>
           
@@ -186,7 +185,7 @@ export default function Landing() {
 
           <Motion delay={6}>
             <div style={{ marginTop: 80, display: 'flex', alignItems: 'center', gap: 16, opacity: .4, zIndex: 1, position: 'relative' }}>
-              <span style={{ fontSize: 11, fontWeight: 600, color: 'var(--ink)', letterSpacing: '.04em', fontFamily: 'var(--font-mono)' }}>Built for High-Stakes Competitions · hack-judge-v2.vercel.app</span>
+              <span style={{ fontSize: 11, fontWeight: 600, color: 'var(--ink)', letterSpacing: '.04em', fontFamily: 'var(--font-mono)' }}>Built for High-Stakes Competitions</span>
             </div>
           </Motion>
         </div>
