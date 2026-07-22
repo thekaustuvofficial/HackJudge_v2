@@ -187,15 +187,10 @@ export function ResultsTab() {
             <button onClick={() => setSortBy('overall')} className="hover-lift" style={{ padding: '6px 16px', fontSize: 13, fontWeight: 600, borderRadius: 'var(--radius-full)', border: 'none', background: sortBy === 'overall' ? 'var(--ink)' : 'transparent', color: sortBy === 'overall' ? 'var(--bg)' : 'var(--muted)', cursor: 'pointer', transition: 'all .2s', boxShadow: sortBy==='overall'?'var(--shadow-sm)':'none' }}>Overall Score</button>
           </div>
           <Btn size="sm" variant="ghost" onClick={() => {
-            const report = document.getElementById('printable-report');
-            if (report) report.style.display = 'block';
-            const originalTitle = document.title;
+            const prev = document.title;
             document.title = `${ev.name} - Official Report`;
-            setTimeout(() => {
-              window.print();
-              document.title = originalTitle;
-              if (report) report.style.display = 'none';
-            }, 100);
+            window.print();
+            document.title = prev;
           }}><Printer size={16} /> Export PDF</Btn>
         </div>
       </div>

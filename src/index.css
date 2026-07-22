@@ -395,6 +395,12 @@ input[type=range]:focus-visible::-webkit-slider-thumb {
   }
 }
 
+@media screen {
+  #printable-report {
+    display: none;
+  }
+}
+
 @media print {
   @page {
     margin: 15mm;
@@ -412,22 +418,20 @@ input[type=range]:focus-visible::-webkit-slider-thumb {
     visibility: hidden;
   }
 
-  #printable-report, #printable-report * {
+  #printable-report,
+  #printable-report * {
     visibility: visible;
   }
 
   #printable-report {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 40px;
     background: #ffffff !important;
-  }
-
-  /* Reset vars for print to ensure absolute white background regardless of theme */
-  #printable-report {
     --bg: #ffffff;
     --bg-2: #f8f9fa;
     --panel: #ffffff;
