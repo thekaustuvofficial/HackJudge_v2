@@ -189,8 +189,11 @@ export function ResultsTab() {
           <Btn size="sm" variant="ghost" onClick={() => {
             const report = document.getElementById('printable-report');
             if (report) report.style.display = 'block';
+            const originalTitle = document.title;
+            document.title = `${ev.name} - Official Report`;
             setTimeout(() => {
               window.print();
+              document.title = originalTitle;
               if (report) report.style.display = 'none';
             }, 100);
           }}><Printer size={16} /> Export PDF</Btn>
@@ -308,7 +311,7 @@ export function ResultsTab() {
           })}
         </Card>
       </Motion>
-      <ReportTemplate ev={ev} round={round} sorted={sorted} sortBy={sortBy} getOverallAvg={getOverallAvg} />
+      <ReportTemplate ev={ev} />
     </div>
   );
 }
