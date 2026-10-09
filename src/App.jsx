@@ -10,6 +10,7 @@ import { AuthProvider, useAuth } from './hooks/useAuth.jsx';
 import { supabase } from './lib/supabase';
 import { parseJwt } from './security.js';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Analytics } from '@vercel/analytics/react';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -122,6 +123,7 @@ export default function App() {
           <ErrorBoundary>
             <Router />
             <ToastContainer />
+            <Analytics />
           </ErrorBoundary>
         </AuthProvider>
       </QueryClientProvider>
